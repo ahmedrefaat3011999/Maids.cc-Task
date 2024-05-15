@@ -1,0 +1,12 @@
+li {
+  text-align: left;
+  position: relative;
+}
+span {
+  position: absolute;
+  font-size: 20px;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}

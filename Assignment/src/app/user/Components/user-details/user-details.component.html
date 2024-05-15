@@ -1,0 +1,17 @@
+<mat-card  appRotateCard class="example-card mx-auto my-5" data-aos="fade-up"
+data-aos-duration="2000" >
+    <mat-card-header>
+      <mat-card-title class="mb-2"><span class=" rounded-circle id" >{{Details.data?.id}} )</span> {{Details.data?.first_name}} {{Details.data?.last_name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="Details.data?.avatar"  alt="User Photo" height="200px">
+    <mat-card-content class="py-3">
+      <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facilis iste aut inventore ipsum illo quo recusandae, ullam perspiciatis error aliquid corporis quidem magni debitis labore harum tenetur nostrum obcaecati.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="accent" (click)="goBack()">Back</button>
+      <button mat-button color="accent" class="text-nowrap text-smaller" >Rotate With Custom Directive</button>
+    </mat-card-actions>
+  </mat-card>
+  

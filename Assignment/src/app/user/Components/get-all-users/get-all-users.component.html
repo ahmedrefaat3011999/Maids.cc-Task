@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mx-auto my-3">
+        <ul class="list-group" >
+          <li 
+          *ngFor="let user of filteredUsers; let i = index"
+          [attr.data-aos]="i % 2 === 0 ? 'flip-left' : 'flip-right'"
+          [attr.data-aos-delay]="i * 300"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          class="list-group-item"
+            
+            class="list-group-item " [routerLink]="'/userDetails/' + user.id">
+            <img class="rounded-circle mx-3" [src]="user.avatar" height="40px" width="40px" alt="user Image"  >
+            {{user.id}} )  {{user.first_name}} {{user.last_name}}
+          </li>
+          <li class="list-group-item " *ngIf="errorNotFound">Please Select another Page from Pagination</li>
+          <li class="list-group-item "  *ngIf="errorEnterNumber">Please enter a number</li>
+        </ul>
+        <app-pagination
+        [totalPages]="totalPages"
+        [pageNumbers]="pageNumbers"
+        [currentPage]="currentPage"
+        (pageChanged)="getUsersFor($event)">
+      </app-pagination>
+      </div>
+      
+    
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<h2 class="text-center text-break my-3"
+    data-aos="fade-up"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="1000">
+  Which Was Required in this Task
+</h2>
+
+<div class="d-flex justify-content-center"
+>
+  <ul class="mx-auto">
+    <li *ngFor="let task of tasks; let i = index"
+        class="p-3 btn btn-outline-info rounded w-75 mb-2"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-easing]="'ease-in-out'"
+        [attr.data-aos-duration]="'1000'"
+        [attr.data-aos-delay]="i * 200 + 200"
+    >
+      {{ task.description }}
+      <span  class="fas fa-check-circle text-success"></span>
+    </li>
+  </ul>
+</div>
